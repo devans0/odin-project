@@ -1,0 +1,32 @@
+FLEXBOX:
+
+ DEF:
+    Flex Container: an area of a document laid out with flex
+    Flex Item: items that exist within a container; can also be a container of their own
+
+  - Used to allow for elements to be formatted within containers; can stretch and shrink according to
+  rules (flexing)
+  - "display:flex" used in container to define it as a flexbox
+  - "flex 1" used as shorthand for "flex 1 1 0%" which is "flex {grow} {shrink} {basis}"
+  - flex grow and shrink are ratios at which the element will grow or shrink
+  - flex basis defines the initial size of a flex item
+	- 0% will ignore an items width
+	- auto will check for a width or height declaration
+  - "flex-direction: {column, row}" defines the main axis that flex works on; default is row
+	- when other arguments are used, they are relative to the main axis
+          - ie) flex 1 will tell elements to fill space vertically; flex-basis refers to height instead of 
+                width etc.
+  - "justify-content" allows you to space elements along the main axis
+  - "align-content" spaces elements along the cross axis
+  - "gap" defines a gap that exists between each element; like a margin
+  - possible to specify a reverse of the two axis; row-reverse and column-reverse
+  - flexbox does not specify right or left in order abstract away any specific writing mode like English
+	- instead, it defines start and end; since a document written in English begins on the left and ends
+        on the right, but one in arabic would start on the right and end on the left
+  - to crate a flex container, set "display: {flex, inline-flex}"
+	- default axis is row
+	- items begin from start edge of main axis
+	- by default, items do not stretch in main axis, but can shrink (flex 0 1 auto)
+	- by default, items will stretch to fill cross-axis
+	- flex-wrap is set to 'nowrap' by default
+  -  
